@@ -1,0 +1,260 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+struct node{
+
+int data ;
+
+struct node * left ;
+
+struct node * right ;
+
+};
+
+int main(){
+
+    //for node1
+
+    int * node1 = (struct node)malloc(sizeof(struct node)) ;
+
+    node1 -> data = 20 ;
+
+    struct node1 * left = NULL ;
+
+    struct node1 * right = node2 ;
+
+
+
+    //for node2
+
+    int * node2 = (struct node)malloc(sizeof(struct node)) ;
+
+    node2 -> data = 10 ;
+
+    struct node2 * left = node1 ;
+
+    struct node2 * right = node3 ;
+
+
+
+
+
+    //for node3
+
+    int * node3 = (struct node)malloc(sizeof(struct node)) ;
+
+    node3 -> data = 2 ;
+
+    struct node3 * left = node2 ;
+
+    struct node3 * right = node4 ;
+
+
+
+    //for node4
+
+    int * node4 = (struct node)malloc(sizeof(struct node)) ;
+
+    node4 -> data = 1 ;
+
+    struct node4 * left = node3 ;
+
+    struct node4 * right = node5 ;
+
+
+
+    //for node5
+
+    int * node5 = (struct node)malloc(sizeof(struct node)) ;
+
+    node5 -> data = 7 ;
+
+    struct node5 * left = node4 ;
+
+    struct node5 * right = node6 ;
+
+
+
+    //for node6
+
+    int * node6 = (struct node)malloc(sizeof(struct node)) ;
+
+    node6 -> data = 5 ;
+
+    struct node6 * left = node5 ;
+
+    struct node6 * right = node7 ;
+
+
+
+    //for node7
+
+    int * node7 = (struct node)malloc(sizeof(struct node)) ;
+
+    node7 -> data = 9 ;
+
+    struct node7 * left = node6 ;
+
+    struct node7 * right = node8 ;
+
+
+
+    //for node8
+
+    int * node8 = (struct node)malloc(sizeof(struct node)) ;
+
+    node8 -> data = 30 ;
+
+    struct node8 * left = node7 ;
+
+    struct node8 * right = node9 ;
+
+
+
+    //for node9
+
+    int * node9 = (struct node)malloc(sizeof(struct node)) ;
+
+    node9 -> data = 25 ;
+
+    struct node9 * left = node8 ;
+
+    struct node9 * right = node10 ;
+
+
+
+    //for node10
+
+    int * node10 = (struct node)malloc(sizeof(struct node)) ;
+
+    node10 -> data = 40 ;
+
+    struct node10 * left = node9 ;
+
+    struct node10 * right = node11 ;
+
+
+
+    //for node11
+
+    int * node11 = (struct node)malloc(sizeof(struct node)) ;
+
+    node11 -> data = 21 ;
+
+    struct node11 * left = node10 ;
+
+    struct node11 * right = node12 ;
+
+
+
+    //for node12
+
+    int * node12 = (struct node)malloc(sizeof(struct node)) ;
+
+    node12 -> data = 35 ;
+
+    struct node12 * left = node11 ;
+
+    struct node12 * right = node13 ;
+
+
+
+    //for node13
+
+    int * node13 = (struct node)malloc(sizeof(struct node)) ;
+
+    node13 -> data = 45 ;
+
+    struct node13 * left = node12 ;
+
+    struct node13 * right = node14 ;
+
+
+
+
+
+    //for node14
+
+    int * node14 = (struct node)malloc(sizeof(struct node)) ;
+
+    node14 -> data = 29 ;
+
+    struct node14 * left = node13 ;
+
+    struct node14 * right = node15 ;
+
+
+
+
+
+    //for node15
+
+    int * node15 = (struct node)malloc(sizeof(struct node)) ;
+
+    node15 -> data = 27 ;
+
+    struct node15 * left = node14 ;
+
+    struct node15 * right = NULL ;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include #include
+struct BSTnode
+{
+int data;
+struct BSTnode *left;
+struct BSTnode *right;
+};
+struct BSTnode* getNewNode(int data)
+{
+struct BSTnode* newNode=(struct BSTnode*)malloc(sizeof(struct BSTnode));
+newNode->data = data;
+newNode->left = NULL;
+newNode->right = NULL;
+
+return newNode;
+}
+struct BSTnode* insert(struct BSTnode *root, int data)
+{
+if(root==NULL)
+{
+root = getNewNode(data);
+}
+else if(data < root->data)
+{
+root->left = insert(root->left, data);
+}
+else
+root->right = insert(root->right, data);
+
+return root;
+}
+
+int main()
+{
+struct BSTnode *root=NULL;
+root = insert(root, 20);
+root = insert(root, 10);
+root = insert(root, 5);
+root = insert(root, 25);
+}
+
+
