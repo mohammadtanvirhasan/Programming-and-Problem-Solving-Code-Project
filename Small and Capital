@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[1001];
+    scanf("%s", s);
+    int capital = 0;
+    int small = 0;
+    int length = strlen(s) ;
+
+    for (int i = 0; i < length; i++) {  // Loop through each character in the string
+        if (s[i] >= 'a' && s[i] <= 'z') {
+            small++;
+        } else if (s[i] >= 'A' && s[i] <= 'Z') {
+            capital++;
+        }
+    }
+
+    printf("%d %d", capital, small);
+
+    return 0;
+}
