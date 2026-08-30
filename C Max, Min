@@ -1,0 +1,32 @@
+#include <stdio.h>
+//Function to print numbers & find minimum & maximum
+void printMinAndMax(int ar[], int n){
+if(n ==  0){
+    return ; //Early return if the array is empty
+}
+    //surute dhori array er 0 tomo index er man minimum & Maximum
+    int min = ar[0] ;
+    int max = ar[0] ;
+    //use loop for finding maximum & minimum
+    for(int i  = 1;i < n;i++){
+        if(ar[i] < min){
+            min = ar[i] ;//Update min if ar[i] is less than min than minimum will be ar[i]
+        }
+        if(ar[i] > max){
+            max = ar[i] ;//Update max if ar[i] is greater than max than maximum will be ar[i]
+        }
+    }
+    printf("%d %d", min, max) ;
+}
+int main(){
+ int n ;
+ scanf("%d", &n) ;
+ int ar[n] ;
+ for(int i = 0;i < n;i++){
+        scanf("%d", &ar[i]) ;
+}
+ 
+printMinAndMax(ar, n) ;//Call the function with the array & its size
+return 0 ;
+ 
+}
