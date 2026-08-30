@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(){
+int a, b, c ;
+scanf("%d %d %d", &a, &b, &c) ;
+//Prothom e choto theke boro akare number gulo & tarpor age jeivabe cilo seivabe number gulo print korte
+if(a <= b && a <= c){
+    if(b <= c){
+        printf("%d\n%d\n%d\n\n", a, b, c) ;
+    }
+    else{
+        printf("%d\n%d\n%d\n\n", a, c, b) ;
+    }
+}
+    else if(b <= a && b <= c){
+        if(a <= c){
+            printf("%d\n%d\n%d\n\n", b, a, c) ;
+        }
+        else{
+            printf("%d\n%d\n%d\n\n", b, c, a) ;
+        }
+    }
+        //a & b konotai choto na hole c obossoi choto hobe
+        else{
+            //c must be smALLEST
+            if(a <= b){
+                printf("%d\n%d\n%d\n\n", c, a, b) ;
+            }
+            else{
+                printf("%d\n%d\n%d\n\n", c, b, a) ;
+            }
+        }
+        //print in the sequence as they were read
+        printf("%d\n%d\n%d\n\n", a, b, c) ;
+    }
+ 
+ 
