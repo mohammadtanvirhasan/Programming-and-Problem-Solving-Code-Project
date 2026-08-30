@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int n, x ;
+    scanf("%d", &n) ;
+    int ar[n] ;
+    for(int i = 0;i < n;i++){
+       scanf("%d", &ar[i]) ;
+    }
+    scanf("%d", &x) ;
+    int a = 0 ;
+    for(int i = 0;i < n;i++){
+       if(ar[i] == x){
+          a = 1 ;
+          printf("%d\n", i) ;
+          break ;
+       }
+    }
+       if(a == 0){
+       printf("-1\n") ;
+       return 0;
+}
+}
