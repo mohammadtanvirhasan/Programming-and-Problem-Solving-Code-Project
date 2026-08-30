@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+   int n, x;
+   scanf("%d", &n) ;
+   int ar[n] ;
+   for(int i = 0;i < n;i++){
+   scanf("%d", &ar[i]) ;
+}
+ int lowest = ar[0], lowest_position = 1 ;
+ for(int i = 1;i < n;i++){
+    if(lowest > ar[i]){
+       lowest = ar[i] ;
+       lowest_position = i + 1;
+    }
+ }
+    printf("%d %d", lowest, lowest_position) ;
+ 
+   return 0;
+}
