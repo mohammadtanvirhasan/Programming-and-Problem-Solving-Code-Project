@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main(){
+int N, M ;
+ 
+scanf("%d %d", &N, &M) ;
+ 
+if(M > 100000){
+    return 1; //for early exit if M is too large
+}
+ 
+int count[100001] =  {0} ;// Array to keep track of counts, assuming a<=M<=100000
+ 
+int num ;
+for(int i = 0;i < N; i++){
+    scanf("%d", &num) ;//Read each number in the array
+    if(num >= 1 && num <= M){
+        count[num]++; //increment the count of this number
+        
+        }
+    }
+    
+    //output the countsof each number from 1 to M
+    for(int i = 1;i <= M;i++){
+        printf("%d\n", count[i]) ;
+    }
+return 0 ;
+ 
+}
