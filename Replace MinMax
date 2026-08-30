@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+   int n ;
+   scanf("%d", &n) ;
+   int s[n] ;
+   for(int i = 0;i < n;i++){
+      scanf("%d", &s[i]) ;
+   }
+   int max = s[0], min = s[0], b = 0, c = 0 ;
+   for(int i = 1;i < n;i++){
+      if(max < s[i]){
+         max = s[i] ;
+         b = i ;
+      }
+      
+      if(min > s[i]){
+         min = s[i] ;
+         c = i ;
+      }
+   }
+   int temp ;
+   temp = s[b] ;
+   s[b] = s[c] ;
+   s[c] = temp ;
+   for(int k = 0;k < n;k++){
+      printf("%d ", s[k]) ;
+   }
+    return 0;
+}
